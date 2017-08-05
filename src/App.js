@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
-
+import AppBarComponent from './components/AppBarComponent'
 class App extends Component {
+
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Portfolio</h2>
+          <AppBarComponent />
         </div>
       </div>
     );

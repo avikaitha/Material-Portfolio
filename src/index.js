@@ -9,8 +9,12 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import reducers from './reducers';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
 
 const createStoreWithMiddleware = applyMiddleware(promise, thunkMiddleware)(createStore);
+
+injectTapEventPlugin();
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
