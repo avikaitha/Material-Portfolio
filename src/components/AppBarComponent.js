@@ -35,6 +35,7 @@ const styles = {
   appBar: {
     background: '#DD2C00',
     elevation: 0,
+    color: "#FFFFFF",
   }
 };
 
@@ -56,17 +57,15 @@ class AppBarComponent extends Component {
   render() {
     return (
       <div style={styles.root}>
-        <AppBar position="fixed" style={styles.appBar}>
-          <Toolbar>
-            <Typography type="title" color="inherit" style={styles.flex}>
-              Avinash Reddy Kaitha
-            </Typography>
-            <Button color={this.state.color} onClick={this.handleClick.bind(this)}>ABOUT</Button>
-            <Button color="contrast">PROJECTS</Button>
-            <Button color="contrast">RESUME</Button>
-            <Button color="contrast">CONTACT</Button>
-          </Toolbar>
-        </AppBar>
+        <Toolbar style={styles.appBar}>
+          <Typography type="title" color="inherit" style={styles.flex}>
+            Avinash Reddy Kaitha
+          </Typography>
+          <Button color={this.state.color} onClick={this.handleClick.bind(this)}>ABOUT</Button>
+          <Button color="contrast">PROJECTS</Button>
+          <Button color="contrast">RESUME</Button>
+          <Button color="contrast">CONTACT</Button>
+        </Toolbar>
       </div>
     );
   }
@@ -88,3 +87,16 @@ export default AppBarComponent;
 // <Button color="contrast">PROJECTS</Button>
 // <Button color="contrast">RESUME</Button>
 // <Button color="contrast">CONTACT</Button>
+
+
+// <AppBar position="fixed" style={styles.appBar}>
+//   <Toolbar>
+//     <Typography type="title" color="inherit" style={styles.flex}>
+//       Avinash Reddy Kaitha
+//     </Typography>
+//     <Button color={this.state.color} onClick={this.handleClick.bind(this)}>ABOUT</Button>
+//     <Button color="contrast">PROJECTS</Button>
+//     <Button color="contrast">RESUME</Button>
+//     <Button color="contrast">CONTACT</Button>
+//   </Toolbar>
+// </AppBar>
