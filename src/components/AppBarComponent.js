@@ -33,7 +33,8 @@ const styles = {
     flex: 1,
   },
   appBar: {
-    background: '#DD2C00'
+    background: '#DD2C00',
+    elevation: 0,
   }
 };
 

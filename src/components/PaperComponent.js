@@ -6,33 +6,31 @@ import Typography from 'material-ui/Typography';
 
 const styleSheet = createStyleSheet(theme => ({
   root: theme.mixins.gutters({
-    paddingTop: 16,
+    paddingTop: 64,
     paddingBottom: 16,
-    margin: 'auto',
-
-
+    width: '100%',
   }),
   paper: theme.mixins.gutters({
-    paddingTop: 16,
-    paddingBottom: 16,
+    paddingTop: 0,
+    paddingBottom: 0,
     height: '400px',
-
+    backgroundColor: '#DD2C00',
   })
 }));
 
 function PaperSheet(props) {
   const classes = props.classes;
   return (
-
-      <Paper className={classes.paper} elevation={4}>
+    <div className={classes.root}>
+      <Paper className={classes.paper} elevation={10}>
         <Typography type="headline" component="h3">
-          Project Details
+          Avinash Reddy Kaitha
         </Typography>
         <Typography type="body1" component="p">
-          Paper can be used to build surface or other elements for your application.
+          Hi!
         </Typography>
       </Paper>
-
+    </div>
   );
 }
 
