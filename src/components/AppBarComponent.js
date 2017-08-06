@@ -5,8 +5,25 @@ import {orange} from 'material-ui/colors';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
+import Button from 'material-ui/Button';
+import BasicTabs from './TabComponent';
+import Tabs, { Tab } from 'material-ui/Tabs';
 
-const styleSheet = createStyleSheet({
+// const styleSheet = createStyleSheet({
+//   root: {
+//     marginTop: 0,
+//     width: '100%',
+//
+//   },
+//   flex: {
+//     flex: 1,
+//   },
+//   appBar: {
+//     background: '#DD2C00'
+//   }
+// });
+
+const styles = {
   root: {
     marginTop: 0,
     width: '100%',
@@ -16,31 +33,57 @@ const styleSheet = createStyleSheet({
     flex: 1,
   },
   appBar: {
-    background: '#EF6C00'
+    background: '#DD2C00'
   }
-});
+};
 
-function AppBarComponent(props) {
+class AppBarComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      color: "contrast"
+    }
 
-  const classes = props.classes;
+  }
 
+  handleClick() {
+    console.log("Clicked!!!");
+    // this.setState({color: "default"});
+
+  }
+
+  render() {
     return (
-      <div className={classes.root}>
-        <AppBar position="static" className={classes.appBar}>
+      <div style={styles.root}>
+        <AppBar position="static" style={styles.appBar}>
           <Toolbar>
-            <Typography type="title" color="inherit" className={classes.flex}>
+            <Typography type="title" color="inherit" style={styles.flex}>
               Avinash Reddy Kaitha
             </Typography>
+            <Button color={this.state.color} onClick={this.handleClick.bind(this)}>ABOUT</Button>
+            <Button color="contrast">PROJECTS</Button>
+            <Button color="contrast">RESUME</Button>
+            <Button color="contrast">CONTACT</Button>
           </Toolbar>
         </AppBar>
       </div>
     );
-
+  }
 
 }
 
-AppBarComponent.propTypes = {
-  classes: propTypes.object.isRequired
-};
 
-export default withStyles(styleSheet)(AppBarComponent);
+
+export default AppBarComponent;
+
+// <Tabs index={this.state.index} onChange={this.handleChange}>
+//   <Tab label="ABOUT"/>
+//   <Tab label="PROJECTS" />
+//   <Tab label="RESUME" />
+//   <Tab label="CONTACT" />
+// </Tabs>
+
+// <Button color={this.state.color} onClick={this.handleClick.bind(this)}>ABOUT</Button>
+// <Button color="contrast">PROJECTS</Button>
+// <Button color="contrast">RESUME</Button>
+// <Button color="contrast">CONTACT</Button>
