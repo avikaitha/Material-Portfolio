@@ -55,7 +55,7 @@ class AppBarComponent extends Component {
   render() {
     return (
       <div style={styles.root}>
-        <AppBar position="static" style={styles.appBar}>
+        <AppBar position="fixed" style={styles.appBar}>
           <Toolbar>
             <Typography type="title" color="inherit" style={styles.flex}>
               Avinash Reddy Kaitha

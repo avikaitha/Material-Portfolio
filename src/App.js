@@ -8,6 +8,12 @@ const styles ={
     paddingBottom: 16,
     paddingLeft: 16,
     paddingRight: 16
+  },
+  firstRow: {
+    paddingTop: 86,
+    paddingBottom: 16,
+    paddingLeft: 16,
+    paddingRight: 16
   }
 };
 
@@ -18,7 +24,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <AppBarComponent />
-          <div className="row" style={styles.row}>
+          <div className="row" style={styles.firstRow}>
             <div className="col-sm-8">
               <PaperSheet />
             </div>
